@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Give2.Enums;
+using Tradeem.Enums;
 using Xamarin.Forms;
 
-namespace Give2.Services
+namespace Tradeem.Services
 {
     public class NavigationService : INavigationService
     {

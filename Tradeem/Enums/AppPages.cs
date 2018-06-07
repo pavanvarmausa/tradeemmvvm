@@ -1,8 +1,8 @@
 ﻿using System;
-namespace Give2.Enums
+namespace Tradeem.Enums
 {
     public enum AppPages
     {
-        LoginPage, SignUpPage, HomePage, FacebookLoginPage, PromotionListPage
+        LoginPage, SignUpPage, HomePage, AboutPage
     }
 }

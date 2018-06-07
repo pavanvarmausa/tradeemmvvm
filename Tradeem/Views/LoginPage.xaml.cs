@@ -10,6 +10,7 @@ namespace Tradeem.Views
         public LoginPage()
         {
             InitializeComponent();
+            BindingContext = App.Locator.Login;
         }
     }
 }

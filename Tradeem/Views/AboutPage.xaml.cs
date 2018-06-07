@@ -11,6 +11,7 @@ namespace Tradeem.Views
         public AboutPage()
         {
             InitializeComponent();
+            BindingContext = App.Locator.About;
         }
     }
 }

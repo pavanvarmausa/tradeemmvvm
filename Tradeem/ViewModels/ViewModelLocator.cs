@@ -12,12 +12,10 @@
   See http://www.galasoft.ch/mvvm
 */
 
-using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using CommonServiceLocator;
-using Give2.Services;
 
-namespace Give2.ViewModel
+namespace Tradeem.ViewModels
 {
     /// <summary>
     /// This class contains static references to all the view models in the
@@ -44,20 +42,24 @@ namespace Give2.ViewModel
             ////}
             //SearchNearbyServices myEmailService = SearchNearbyServices.CreateAsync();
 
-            SimpleIoc.Default.Register<HomeViewModel>();
+            //SimpleIoc.Default.Register<HomeViewModel>();
+            //SimpleIoc.Default.Register<LoginViewModel>();
+            //SimpleIoc.Default.Register<SignUpViewModel>();
+
+            SimpleIoc.Default.Register<AboutViewModel>();
             SimpleIoc.Default.Register<LoginViewModel>();
-            SimpleIoc.Default.Register<SignUpViewModel>();
-            SimpleIoc.Default.Register<SearchNearbyServices>();
-            //SimpleIoc.Default.Register(() => SearchNearbyServices.CreateAsync());
         }
 
-        //public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
-
-        public HomeViewModel Home => ServiceLocator.Current.GetInstance<HomeViewModel>();
+        public AboutViewModel About => ServiceLocator.Current.GetInstance<AboutViewModel>();
 
         public LoginViewModel Login => ServiceLocator.Current.GetInstance<LoginViewModel>();
 
-        public SignUpViewModel SignUp => ServiceLocator.Current.GetInstance<SignUpViewModel>();
+
+        //public HomeViewModel Home => ServiceLocator.Current.GetInstance<HomeViewModel>();
+
+        //public LoginViewModel Login => ServiceLocator.Current.GetInstance<LoginViewModel>();
+
+        //public SignUpViewModel SignUp => ServiceLocator.Current.GetInstance<SignUpViewModel>();
 
         public static void Cleanup()
         {

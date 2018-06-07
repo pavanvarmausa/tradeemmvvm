@@ -1,8 +1,8 @@
 ﻿using System;
-using Give2.Enums;
+using Tradeem.Enums;
 using Xamarin.Forms;
 
-namespace Give2.Services
+namespace Tradeem.Services
 {
     public interface INavigationService
     {

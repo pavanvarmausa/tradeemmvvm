@@ -1,19 +1,22 @@
 ﻿using System;
 using System.Windows.Input;
-
+using Tradeem.Services;
 using Xamarin.Forms;
 
 namespace Tradeem.ViewModels
 {
     public class AboutViewModel : BaseViewModel
     {
-        public AboutViewModel()
-        {
-            Title = "About";
+        private readonly INavigationService _navigationService;
+        public ICommand OpenWebCommand { get; private set; }
 
-            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
+        public AboutViewModel(INavigationService navigationService)
+        {
+            //Title = "About";
+            _navigationService = navigationService;
+            OpenWebCommand = new Command(() => _navigationService.NavigateTo(Enums.AppPages.LoginPage));
         }
 
-        public ICommand OpenWebCommand { get; }
+        //public ICommand OpenWebCommand { get; }
     }
 }
