@@ -4,8 +4,6 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 using Xamarin.Forms;
-
-using Tradeem.Models;
 using Tradeem.Services;
 using GalaSoft.MvvmLight;
 
