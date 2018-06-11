@@ -44,8 +44,7 @@ namespace Tradeem.ViewModels
 
             //SimpleIoc.Default.Register<HomeViewModel>();
             //SimpleIoc.Default.Register<LoginViewModel>();
-            //SimpleIoc.Default.Register<SignUpViewModel>();
-
+            SimpleIoc.Default.Register<SignUpViewModel>();
             SimpleIoc.Default.Register<AboutViewModel>();
             SimpleIoc.Default.Register<LoginViewModel>();
         }
@@ -59,7 +58,7 @@ namespace Tradeem.ViewModels
 
         //public LoginViewModel Login => ServiceLocator.Current.GetInstance<LoginViewModel>();
 
-        //public SignUpViewModel SignUp => ServiceLocator.Current.GetInstance<SignUpViewModel>();
+        public SignUpViewModel SignUp => ServiceLocator.Current.GetInstance<SignUpViewModel>();
 
         public static void Cleanup()
         {

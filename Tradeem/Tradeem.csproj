@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Enums\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Services\IDataStore.cs" />
@@ -22,13 +23,11 @@
     <Compile Remove="Views\NewItemPage.xaml.cs" />
     <Compile Remove="Services\MockDataStore.cs" />
     <Compile Remove="Views\MainPage.xaml.cs" />
-    <Compile Remove="Views\MyPage.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Views\ItemDetailPage.xaml" />
     <EmbeddedResource Remove="Views\ItemsPage.xaml" />
     <EmbeddedResource Remove="Views\NewItemPage.xaml" />
     <EmbeddedResource Remove="Views\MainPage.xaml" />
-    <EmbeddedResource Remove="Views\MyPage.xaml" />
   </ItemGroup>
 </Project>

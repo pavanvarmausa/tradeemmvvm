@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Tradeem.Models;
 using Xamarin.Forms;
 
 namespace Tradeem.Views
@@ -10,7 +10,8 @@ namespace Tradeem.Views
         public LoginPage()
         {
             InitializeComponent();
-            BindingContext = App.Locator.Login;
+            var viewModel = App.Locator.Login;
+            BindingContext = viewModel;
         }
     }
 }
