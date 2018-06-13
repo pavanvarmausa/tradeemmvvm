@@ -12,5 +12,10 @@ namespace Tradeem.Views
             InitializeComponent();
             BindingContext = App.Locator.SignUp;
         }
+
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new SignUpSuccessPage());
+        }
     }
 }

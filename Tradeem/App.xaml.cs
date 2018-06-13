@@ -27,7 +27,7 @@ namespace Tradeem
                 // Configure pages:
                 navigationService.Configure(AppPages.AboutPage, typeof(AboutPage));
                 navigationService.Configure(AppPages.LoginPage, typeof(LoginPage));
-                navigationService.Configure(AppPages.HomePage, typeof(HomePage));
+                navigationService.Configure(AppPages.LoginSuccessPage, typeof(LoginSuccessPage));
                 navigationService.Configure(AppPages.SignUpPage, typeof(SignUpPage));
 
                 // Register NavigationService in IoC container:

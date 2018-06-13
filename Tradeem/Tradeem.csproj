@@ -23,11 +23,13 @@
     <Compile Remove="Views\NewItemPage.xaml.cs" />
     <Compile Remove="Services\MockDataStore.cs" />
     <Compile Remove="Views\MainPage.xaml.cs" />
+    <Compile Remove="Views\HomePage.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Views\ItemDetailPage.xaml" />
     <EmbeddedResource Remove="Views\ItemsPage.xaml" />
     <EmbeddedResource Remove="Views\NewItemPage.xaml" />
     <EmbeddedResource Remove="Views\MainPage.xaml" />
+    <EmbeddedResource Remove="Views\HomePage.xaml" />
   </ItemGroup>
 </Project>

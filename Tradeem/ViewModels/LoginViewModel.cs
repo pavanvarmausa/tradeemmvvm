@@ -10,7 +10,7 @@ namespace Tradeem.ViewModels
     {
         private readonly INavigationService _navigationService;
         public ICommand LoginResultCommand { get; private set; }
-        private int LoginResult = 0;
+        private int LoginResult = 1;
 
        //private String userName;
         //private String password;
@@ -52,7 +52,8 @@ namespace Tradeem.ViewModels
             //    set variable LoginResult to 0, to navigate the user back to LoginPage again
             //--------------------------------------------------------------------------------- 
 
-            if (LoginResult==0) {
+            if (LoginResult==1) 
+                /*            {
                 LoginResultCommand = new Command(() => {
                     //Console.Write("findUser->" + Model.Username);
                     //Console.WriteLine("findPassword" + Model.Password);
@@ -60,14 +61,14 @@ namespace Tradeem.ViewModels
 
                 });
             }
- /*               LoginResultCommand = new Command(() => {
+                LoginResultCommand = new Command(() => {
                 Console.Write("findUser->" + User.Username);
                     Console.WriteLine("findPassword" + User.Password);
                     _navigationService.NavigateTo(Enums.AppPages.HomePage);
                     
             });
             */
-                //LoginResultCommand = new Command(() => _navigationService.NavigateTo(Enums.AppPages.HomePage));
+                LoginResultCommand = new Command(() => _navigationService.NavigateTo(Enums.AppPages.LoginSuccessPage));
             else
                 LoginResultCommand = new Command(() => _navigationService.NavigateTo(Enums.AppPages.LoginPage));
         }

@@ -83,6 +83,11 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
+    <AndroidResource Include="Resources\drawable\TradeEm.png" />
+    <AndroidResource Include="Resources\drawable\baseline_home_black_18dp.png" />
+    <AndroidResource Include="Resources\drawable\baseline_notifications_active_black_18dp.png" />
+    <AndroidResource Include="Resources\drawable\baseline_person_black_18dp.png" />
+    <AndroidResource Include="Resources\drawable\baseline_search_black_18dp.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

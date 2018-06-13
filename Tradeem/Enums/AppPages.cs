@@ -3,6 +3,6 @@ namespace Tradeem.Enums
 {
     public enum AppPages
     {
-        LoginPage, SignUpPage, HomePage, AboutPage
+        LoginPage, SignUpPage, LoginSuccessPage, AboutPage
     }
 }

@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace Tradeem.Views
 {
-    public partial class HomePage : ContentPage
+    public partial class LoginSuccessPage : TabbedPage
     {
-        public HomePage()
+        public LoginSuccessPage()
         {
             InitializeComponent();
         }
