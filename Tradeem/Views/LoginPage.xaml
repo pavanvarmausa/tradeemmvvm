@@ -5,9 +5,13 @@
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
             <Image Source="TradeEm.png"/>
-            <Entry x:Name="Entry_Username" Placeholder="Username" />
-            <Entry x:Name="Entry_Password" Placeholder="Password" />
-            <Button x:Name="Btn_Login" Text="LogIn" Command="{Binding LoginResultCommand}" />
+
+<!--            <Entry x:Name="Entry_Username" Placeholder="Username" />
+                <Entry x:Name="Entry_Password" Placeholder="Password" />
+-->          
+            <Entry x:Name="username" Text="{Binding UserName}" Placeholder="Username" />
+            <Entry x:Name="password" Text="{Binding Password}" Placeholder="Password" IsPassword="true"/>
+            <Button x:Name="Btn_Login" Text="Sign In" Command="{Binding LoginResultCommand}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
