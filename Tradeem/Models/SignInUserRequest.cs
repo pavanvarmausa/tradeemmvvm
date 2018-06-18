@@ -5,9 +5,9 @@ namespace Tradeem.Models
 {
     public class SignInUserRequest
     {
-        public string EmailOrUserName { get; set; }
-        public string Password { get; set; }
-        public string Action { get; set; }
+        public String EmailOrUserName { get; set; }
+        public String Password { get; set; }
+        public String Action { get; set; }
         public String Error { get; set; }
 
         //public User()
