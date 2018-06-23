@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Tradeem.Views.SignUpInterestsPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+            <Label Text=" " HorizontalOptions="Center" />
+            <Label Text="Welcome to Trade'Em!" HorizontalOptions="Center" FontSize="Default" FontAttributes="Bold"/>
+            <Label Text="Select atleast 3 options you're interested in and we'll " HorizontalOptions="Center" FontSize="Micro" />
+            <Label Text="customize your feed so you see what you want to see. " HorizontalOptions="Center" FontSize="Micro" />
+            <Label Text="The more you select, the better your experience will be! " HorizontalOptions="Center" FontSize="Micro" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Image="baseline_person_black_18dp.png" Clicked="Handle_Clicked_2" WidthRequest="60" HeightRequest="60" />
+                <Button Image="TradeEm.png" Clicked="Handle_Clicked_3" WidthRequest="60" HeightRequest="60" />
+                <Button Image="baseline_home_black_18dp.png" Clicked="Handle_Clicked_4" WidthRequest="60" HeightRequest="60" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Image="baseline_person_black_18dp.png" Clicked="Handle_Clicked_2" WidthRequest="60" HeightRequest="60" />
+                <Button Image="TradeEm.png" Clicked="Handle_Clicked_3" WidthRequest="60" HeightRequest="60" />
+                <Button Image="baseline_home_black_18dp.png" Clicked="Handle_Clicked_4" WidthRequest="60" HeightRequest="60" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Image="baseline_person_black_18dp.png" Clicked="Handle_Clicked_2" WidthRequest="60" HeightRequest="60" />
+                <Button Image="TradeEm.png" Clicked="Handle_Clicked_3" WidthRequest="60" HeightRequest="60" />
+                <Button Image="baseline_home_black_18dp.png" Clicked="Handle_Clicked_4" WidthRequest="60" HeightRequest="60" />
+            </StackLayout>            
+            <Button Text="Skip" Clicked="Handle_Clicked_1" FontSize="Small" />
+            <Button Text="Let's Go" Clicked="Handle_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

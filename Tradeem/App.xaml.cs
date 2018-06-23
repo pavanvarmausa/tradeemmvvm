@@ -12,7 +12,7 @@ namespace Tradeem
 {
 	public partial class App : Application
 	{
-		
+        public static String UserID { get; set; }
 		public App ()
 		{
 			InitializeComponent();

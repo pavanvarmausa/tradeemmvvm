@@ -10,6 +10,7 @@ namespace Tradeem.Views
         public LoginSuccessPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this,false);
         }
     }
 }

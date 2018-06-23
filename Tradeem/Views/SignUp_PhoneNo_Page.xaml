@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Tradeem.Views.SignUp_PhoneNo_Page">
+    <ContentPage.Content>
+         <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+<!--             <Image Source="TradeEm.png"/>   -->
+            <Label Text=" " HorizontalOptions="Center" />
+            <Label Text="Show us you are real and give us" HorizontalOptions="Center"/>
+            <Label Text=" those digits" HorizontalOptions="Center"/>
+            <Entry x:Name="Entry_PhNo" Placeholder="(xxx)xx-xxxx" />
+            <Label Text="You will receive a verification code via SMS" HorizontalOptions="Center"/>
+            <Button Text="Next" Clicked="Handle_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

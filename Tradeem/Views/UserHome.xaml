@@ -3,7 +3,7 @@
              Icon="baseline_home_black_18dp.png">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Label Text="This is the User Home Page" />
+            <Label Text="This is the Home Page of User "/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

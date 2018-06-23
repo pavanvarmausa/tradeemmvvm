@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Tradeem.Views.SignUpVerificationPage">
+    <ContentPage.Content>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+<!--             <Image Source="TradeEm.png"/>   -->
+            <Label Text="" HorizontalOptions="Center" />
+            <Label Text="Enter your SMS" HorizontalOptions="Center"/>
+            <Label Text="Verification Code." HorizontalOptions="Center"/>
+            <Entry x:Name="Entry_VerCode" Placeholder="Verification Code" />
+            <Label Text="Resend Code to (xxx)xxx-xxx" />
+            <Button Text="Verify"/>            
+            <Button Text="Next" Clicked="Handle_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

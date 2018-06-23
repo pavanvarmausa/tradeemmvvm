@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Tradeem.Views.SignUpPage">
     <ContentPage.Content>
-         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+         <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand">
 <!--             <Image Source="TradeEm.png"/>   -->
-            <Label Text="        Create Your Account        " />
-            <Label Text="            to Start Trading!       " />
+            <Label Text=" " />
+            <Label Text="     Create Your Account     " HorizontalOptions="Center"/>
+            <Label Text="to Start Trading!" HorizontalOptions="Center"/>
             <Label Text="  " />
             <Entry x:Name="Entry_EmailID" Placeholder="Email*" />
             <Entry x:Name="Entry_Username" Placeholder="Username*" />
             <Entry x:Name="Entry_Password" Placeholder="Password*" />
-            <Button x:Name="Btn_Login" Text="Next ->" Clicked="Handle_Clicked"/>
+            <Button x:Name="Btn_Login" Text="Next" Clicked="Handle_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

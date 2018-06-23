@@ -9,7 +9,7 @@ using Xamarin.Forms;
 using System.Net.Http;
 using System.Text;
 using Newtonsoft.Json;
- */
+*/
 
 namespace Tradeem.ViewModels
 {
@@ -17,7 +17,8 @@ namespace Tradeem.ViewModels
     {
         private readonly INavigationService _navigationService;
         public ICommand LoginResultCommand { get; private set; }
-        private int LoginResult = 1;
+//        public String UserID;
+/*        private int LoginResult = 1;
 
         private String _userName;
         public String UserName
@@ -45,7 +46,7 @@ namespace Tradeem.ViewModels
                 RaisePropertyChanged(() => Password);
             }
         }
-
+*/
 
 /*        private User _model;
         public User Model
@@ -77,20 +78,20 @@ namespace Tradeem.ViewModels
             // Console.WriteLine("findUser->" + UserName);
             // Console.WriteLine("findPassword" + Password);
 
-            SignInUserRequest loginUserRequest = new SignInUserRequest();
+            SignInUserRequest signInUserRequest = new SignInUserRequest();
             // Right now hard-coding to the values Brian mentioned, but later change the code to
             // loginuserrequest.EmailOrUserName = UserName;
             // loginuserrequest.Password = Password;
 
-            loginUserRequest.EmailOrUserName = "professorx";
-            loginUserRequest.Password = "G32Jdd";
+            signInUserRequest.EmailOrUserName = "professorx";
+            signInUserRequest.Password = "G32Jdd";
 
-            loginUserRequest.Action = "LoginUser";
-            loginUserRequest.Error = "";
+            signInUserRequest.Action = "LoginUser";
+            signInUserRequest.Error = "";
 
             RestClient client = new RestClient("https://tradeemWSapi.azurewebsites.net/api/login");
             RestRequest request = new RestRequest();
-            request.AddJsonBody(loginUserRequest);
+            request.AddJsonBody(signInUserRequest);
             request.Method = Method.POST;
 
             //request.AddHeader("Accept", "application/json");
@@ -102,12 +103,14 @@ namespace Tradeem.ViewModels
 
             IRestResponse response = client.Execute(request);
 
-            string json = response.Content; //json has our response
+            String json = response.Content; //json has our response
 
             RestSharp.Deserializers.JsonDeserializer deserial = new RestSharp.Deserializers.JsonDeserializer();
-            SignInAndSignUpUserResponse signInAndSignUpResponse = deserial.Deserialize<SignInAndSignUpUserResponse>(response);
+            SignInAndSignUpUserResponse signInAndSignUpUserResponse = deserial.Deserialize<SignInAndSignUpUserResponse>(response);
 
-            if(signInAndSignUpResponse.State.Equals("success"))
+            App.UserID = signInAndSignUpUserResponse.UserId;
+
+            if(signInAndSignUpUserResponse.State.Equals("success"))
                 _navigationService.NavigateTo(Enums.AppPages.LoginSuccessPage);
             else
                 _navigationService.NavigateTo(Enums.AppPages.LoginPage);

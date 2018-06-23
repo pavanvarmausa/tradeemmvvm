@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Tradeem.Views.NotificationsPage" 
-             Icon="baseline_notifications_active_black_18dp.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Tradeem.Views.NotificationsPage"
+             Icon="baseline_notifications_active_black_18dp.png">   
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Label Text="This is the Notifications Page"/>
+<!--            <Label Text="This is the Notifications Page"/>  -->
+            <Label Text="Notifications" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <ListView x:Name="NotificationsList" ItemsSource="{Binding NotificationList}" ItemTapped="OnItemTapped" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Padding="10">
+                                    <Label Text="{Binding userName}" Font="15" FontAttributes="Bold" TextColor="Blue" />
+                                    <Label Text="{Binding message}" Font="10" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

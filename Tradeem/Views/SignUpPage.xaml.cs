@@ -15,7 +15,8 @@ namespace Tradeem.Views
 
         void Handle_Clicked(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new SignUpSuccessPage());
+//            Navigation.PushAsync(new SignUpSuccessPage());
+            Navigation.PushAsync(new SignUp_PhoneNo_Page());
         }
     }
 }
