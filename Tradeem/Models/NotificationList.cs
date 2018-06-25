@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Tradeem.Models
 {
-    public class Notification
+    public class NotificationList
     {
         public String createdOn { get; set; }
         public String giftType { get; set; }

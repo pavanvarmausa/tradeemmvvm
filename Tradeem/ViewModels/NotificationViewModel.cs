@@ -12,15 +12,28 @@ namespace Tradeem.ViewModels
         public NotificationResponse notificationResponse { get; set; }
 //        public List<Notification> notifications { get; set; }
 
+        private List<NotificationList> _model;
+        public List<NotificationList> NotificationList
+        {
+            get
+            {
+                return _model;
+            }
+            set
+            {
+                _model = value;
+                RaisePropertyChanged(() => NotificationList);
+            }
+        }
+
         public NotificationViewModel()
         {
             NotificationRequest notificationRequest = new NotificationRequest();
             notificationRequest.Action = "LoadNotifications";
             // notificationRequest.UserId = App.UserID;
-            notificationRequest.UserId = "1t8XbvfJARXT4k56Dj8wo3njC1d2";
-            //notificationRequest.UserId = "BekLRAawJMX1KcyDg1fYIXPjXTL2";
-            //notificationRequest.UserId = "";
-            RestClient client = new RestClient("https://tradeemWSapi.azurewebsites.net/api/notification");
+            //notificationRequest.UserId = "1t8XbvfJARXT4k56Dj8wo3njC1d2";
+            notificationRequest.UserId = "BekLRAawJMXlKcyDg1fYIXPjXTL2";
+            RestClient client = new RestClient("https://tradeemwsapi.azurewebsites.net/api/notification");
             RestRequest request = new RestRequest();
             request.AddJsonBody(notificationRequest);
             request.Method = Method.POST;
@@ -32,10 +45,11 @@ namespace Tradeem.ViewModels
             RestSharp.Deserializers.JsonDeserializer deserial = new RestSharp.Deserializers.JsonDeserializer();
 
             notificationResponse = deserial.Deserialize<NotificationResponse>(response);
-            //            notifications = new List<Notification>();
-            //            notification = deserial.Deserialize<Notification>(notificationResponse.NotificationList);
-            Console.WriteLine("User ->"+notificationResponse.ToString());
-            Console.WriteLine("Json String" + json);
+
+            NotificationList = notificationResponse.NotificationList;
+
+//            Console.WriteLine("User ->"+notificationResponse.ToString());
+//            Console.WriteLine("Json String" + json);
         }
     }
 }

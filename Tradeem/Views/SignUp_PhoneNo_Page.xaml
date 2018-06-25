@@ -6,7 +6,7 @@
             <Label Text=" " HorizontalOptions="Center" />
             <Label Text="Show us you are real and give us" HorizontalOptions="Center"/>
             <Label Text=" those digits" HorizontalOptions="Center"/>
-            <Entry x:Name="Entry_PhNo" Placeholder="(xxx)xx-xxxx" />
+            <Entry x:Name="Entry_PhNo" Placeholder="(xxx)xx-xxxx" Completed="Handle_Completed" x:DataType="ConstraintTypeConverter"/>
             <Label Text="You will receive a verification code via SMS" HorizontalOptions="Center"/>
             <Button Text="Next" Clicked="Handle_Clicked"/>
         </StackLayout>

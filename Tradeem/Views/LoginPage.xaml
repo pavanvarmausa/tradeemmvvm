@@ -9,8 +9,8 @@
 <!--            <Entry x:Name="Entry_Username" Placeholder="Username" />
                 <Entry x:Name="Entry_Password" Placeholder="Password" />
 -->          
-            <Entry x:Name="username" Text="{Binding UserName}" Placeholder="Username" />
-            <Entry x:Name="password" Text="{Binding Password}" Placeholder="Password" IsPassword="true"/>
+            <Entry x:Name="username" Text="{Binding UserName}" Placeholder="Username" Completed="Handle_Completed"/>
+            <Entry x:Name="password" Text="{Binding Password}" Placeholder="Password" IsPassword="true" Completed="Handle_Completed_1"/>
             <Button x:Name="Btn_Login" Text="Sign In" Command="{Binding LoginResultCommand}" />
         </StackLayout>
     </ContentPage.Content>

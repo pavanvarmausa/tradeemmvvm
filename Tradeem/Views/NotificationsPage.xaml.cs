@@ -19,7 +19,7 @@ namespace Tradeem.Views
         }
         public void OnItemTapped(Object o, ItemTappedEventArgs eventArgs)
         {
-            var notification = eventArgs.Item as Notification;
+            var notification = eventArgs.Item as NotificationList;
             if(notification != null){
                 DisplayAlert("Notification", String.Format("You selected {0}", notification.userName), "Ok");
             }

@@ -21,5 +21,12 @@ namespace Tradeem.Views
 
             Navigation.PushAsync(new SignUpVerificationPage());
         }
+
+        void Handle_Completed(object sender, System.EventArgs e)
+        {
+            if(Entry_PhNo.Text.Length != 10) {
+                DisplayAlert("Invalid Phone No.", "Phone No. should contain 10 digits.", "Close");
+            }
+        }
     }
 }

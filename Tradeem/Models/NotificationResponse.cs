@@ -9,7 +9,7 @@ namespace Tradeem.Models
         public String State { get; set; }
         public String Message { get; set; }
 //        public String NotificationList { get; set; }
-        public List<Notification> NotificationList { get; set; }
+        public List<NotificationList> NotificationList { get; set; }
         public String Error { get; set; }
 
 /*        public NotificationResponse()

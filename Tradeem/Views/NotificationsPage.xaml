@@ -4,7 +4,7 @@
              x:Class="Tradeem.Views.NotificationsPage"
              Icon="baseline_notifications_active_black_18dp.png">   
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout HorizontalOptions="Center">
 <!--            <Label Text="This is the Notifications Page"/>  -->
             <Label Text="Notifications" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center"/>
             <ListView x:Name="NotificationsList" ItemsSource="{Binding NotificationList}" ItemTapped="OnItemTapped" >
@@ -12,9 +12,12 @@
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <StackLayout Padding="10">
-                                    <Label Text="{Binding userName}" Font="15" FontAttributes="Bold" TextColor="Blue" />
-                                    <Label Text="{Binding message}" Font="10" />
+                                <StackLayout>
+                                <StackLayout Padding="1" Orientation="Horizontal">
+                                    <Label Text="{Binding userName}" Font="15" FontAttributes="Bold" TextColor="Blue"/>
+                                    <Label Text="{Binding message}" Font="10" TextColor="Black" VerticalOptions="Center"/>
+                                </StackLayout>
+                                <Label Text="{Binding createdOn}" Font="8"/>
                                 </StackLayout>
                             </ViewCell.View>
                         </ViewCell>

@@ -17,8 +17,6 @@ namespace Tradeem.ViewModels
     {
         private readonly INavigationService _navigationService;
         public ICommand LoginResultCommand { get; private set; }
-//        public String UserID;
-/*        private int LoginResult = 1;
 
         private String _userName;
         public String UserName
@@ -46,7 +44,7 @@ namespace Tradeem.ViewModels
                 RaisePropertyChanged(() => Password);
             }
         }
-*/
+
 
 /*        private User _model;
         public User Model
@@ -80,8 +78,8 @@ namespace Tradeem.ViewModels
 
             SignInUserRequest signInUserRequest = new SignInUserRequest();
             // Right now hard-coding to the values Brian mentioned, but later change the code to
-            // loginuserrequest.EmailOrUserName = UserName;
-            // loginuserrequest.Password = Password;
+//            signInUserRequest.EmailOrUserName = UserName;
+//            signInUserRequest.Password = Password;
 
             signInUserRequest.EmailOrUserName = "professorx";
             signInUserRequest.Password = "G32Jdd";

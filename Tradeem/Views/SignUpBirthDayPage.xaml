@@ -4,7 +4,8 @@
             <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand">
             <Label Text="" HorizontalOptions="Center" />
             <Label Text="When is your birthday?" HorizontalOptions="Center"/>
-            <Entry x:Name="Entry_BirthDay" Placeholder="MM/DD/YYYY" />
+<!--            <Entry x:Name="Entry_BirthDay" Placeholder="MM/DD/YYYY" />  -->
+            <DatePicker x:Name="Entry_Birthday"></DatePicker>
             <Button Text="Next" Clicked="Handle_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
